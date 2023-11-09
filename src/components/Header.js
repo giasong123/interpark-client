@@ -1,22 +1,26 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import "../styles/header.css";
+import styled from "@emotion/styled";
+import { HeaderTopLeft } from "../styled/header";
 function Header() {
-  //js 코드 자리
+  // js 코드 자리
+
   return (
     <header className="header">
       <div className="header-inner">
         <div className="header-top">
-          <div className="header-top-left">
+          <HeaderTopLeft w="625" h="50">
             <a href="index.html" className="logo"></a>
-
+            {/* <!-- 검색은 div 하나 주자 --> */}
             <div className="header-search">
+              {/* <!-- 사용자가 데이터를 입력한다. --> */}
               <form className="search-form">
                 <input type="text" className="search-word" />
                 <input type="button" value="검색" className="search-bt" />
               </form>
             </div>
-          </div>
+          </HeaderTopLeft>
 
           <div className="header-top-right">
             <ul className="member-menu">
@@ -37,6 +41,7 @@ function Header() {
         </div>
 
         <div className="header-bottom">
+          {/* <!-- 카테고리 메뉴 --> */}
           <ul className="header-cate">
             <li>
               <a href="#">
@@ -75,7 +80,7 @@ function Header() {
               </a>
             </li>
           </ul>
-
+          {/* <!-- 오늘이벤트 메뉴 --> */}
           <ul className="header-today-menu">
             <li>
               <a href="#">

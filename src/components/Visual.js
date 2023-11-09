@@ -97,12 +97,12 @@ function Visual() {
     margin: 0 auto;
   `;
 
-  const slideItem = styled.div`
+  const SlideItem = styled.div`
     position: relative;
     width: 628px;
   `;
 
-  const slideLike = styled.a`
+  const SlideLike = styled.a`
     position: relative;
     width: 100%;
     display: block;
@@ -112,7 +112,7 @@ function Visual() {
 
   return (
     <SectionTag pt={30} pb={80}>
-      <InnerArea style={{height:345}}>
+      <InnerArea style={{ height: 345 }}>
         <Swiper
           slidesPerView={2}
           spaceBetween={24}
@@ -130,14 +130,14 @@ function Visual() {
           {visualHtml.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <slideItem>
-                  <slideLike href={item.url}>
+                <SlideItem>
+                  <SlideLike href={item.url}>
                     <img
                       src={process.env.PUBLIC_URL + item.file}
                       alt={item.file}
                     />
-                  </slideLike>
-                </slideItem>
+                  </SlideLike>
+                </SlideItem>
               </SwiperSlide>
             );
           })}
